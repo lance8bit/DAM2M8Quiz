@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DAM2M8 - Quiz</string>
+    <string name="true_placeholder">TRUE</string>
+    <string name="false_placeholder">FALSE</string>
+    <string name="pregunta1">¿ESTAS EN UN SIMULADOR?</string>
+    <string name="pregunta2">¿1+1 son 3?</string>
+    <string name="pregunta3">¿LA CAPITAL DE ESPAÑA ES MADRID?</string>
+    <string name="correct_toast">PREGUNTA CORRECTA</string>
+    <string name="fail_toast">PREGUNTA FALLIDA</string>
+</resources>
