@@ -8,16 +8,18 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.Inet4Address;
+
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button TrueButton,FalseButton,prevButton,nextButton;
+    private Button TrueButton,FalseButton,prevButton,nextButton,hintButton;
     private TextView pregunt_view;
     private pregunta[] ListPreguntas = new pregunta[]{
-            new pregunta(R.string.pregunta1, true),
-            new pregunta(R.string.pregunta2, false),
-            new pregunta(R.string.pregunta3, true),
+            new pregunta(R.string.pregunta1, true, "hint1"),
+            new pregunta(R.string.pregunta2, false, "hint2"),
+            new pregunta(R.string.pregunta3, true, "hint3"),
     };
 
     private int indexPregunta = 0;
@@ -74,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        FalseButton = (Button) findViewById(R.id.bt_prev);
-        FalseButton.setOnClickListener(new View.OnClickListener() {
+        prevButton = (Button) findViewById(R.id.bt_prev);
+        prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(indexPregunta>0) {
@@ -84,6 +86,16 @@ public class MainActivity extends AppCompatActivity {
                 updateQuestion();
             }
 
+        });
+        hintButton = (Button) findViewById(R.id.btHint);
+        hintButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent hintActivity = new Intent(MainActivity.this, hintActivity.class);
+                String imageName = ListPreguntas[indexPregunta].getResName();
+                hintActivity.putExtra("imageName", imageName);
+                startActivity(hintActivity);
+            }
         });
     }
 }

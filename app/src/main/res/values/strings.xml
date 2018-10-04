@@ -7,4 +7,6 @@
     <string name="pregunta3">¿LA CAPITAL DE ESPAÑA ES MADRID?</string>
     <string name="correct_toast">PREGUNTA CORRECTA</string>
     <string name="fail_toast">PREGUNTA FALLIDA</string>
+    <string name="hintMark">"?"</string>
+    <string name="backPlace">BACK</string>
 </resources>

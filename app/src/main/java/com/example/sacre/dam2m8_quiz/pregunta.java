@@ -4,10 +4,12 @@ public class pregunta {
 
     private int preguntaId;
     private boolean respPregunta;
+    private String resName;
 
-    public pregunta(int idPreg, boolean resPreg){
+    public pregunta(int idPreg, boolean resPreg,String drawName){
         preguntaId = idPreg;
         respPregunta = resPreg;
+        resName = drawName;
     }
 
     public int getPreguntaId() {
@@ -24,5 +26,13 @@ public class pregunta {
 
     public void setRespPregunta(boolean respPregunta) {
         this.respPregunta = respPregunta;
+    }
+
+    public String getResName() {
+        return resName;
+    }
+
+    public void setResName(String resName) {
+        this.resName = resName;
     }
 }
